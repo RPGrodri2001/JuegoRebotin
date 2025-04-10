@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <title>REBOTÍN - Arkanoid</title>
+</head>
+<body>
+  <header>
+    <h1>REBOTÍN GINOs</h1>
+    <div class="subtitle">by: Gino R - Mejorado</div>
+  </header>
+
+  <main class="game-wrapper">
+    <div class="game-container">
+      <canvas id="arkanoidCanvas" width="500" height="400"></canvas>
+
+      <!-- Modales -->
+      <div id="startModal" class="modal">
+        <div class="modal-content">
+          <h2>¡Bienvenido a Rebotín!</h2>
+          <p>Usa las teclas ← y → o mueve el ratón para controlar la paleta</p>
+          <button id="startButton">¡Jugar Ahora!</button>
+        </div>
+      </div>
+
+      <div id="gameOverModal" class="modal hidden">
+        <div class="modal-content">
+          <h2>¡Juego Terminado!</h2>
+          <p>Tu puntuación final: <span id="finalScore">0</span></p>
+          <button id="restartButton">Jugar de Nuevo</button>
+        </div>
+      </div>
+
+      <div id="levelCompleteModal" class="modal hidden">
+        <div class="modal-content">
+          <h2>¡Nivel Completado!</h2>
+          <p>¡Bien hecho!</p>
+          <button id="nextLevelButton">Siguiente Nivel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="info">
+        <div class="score">Puntos: <span id="scoreValue">0</span></div>
+        <div class="lives">Vidas: <span id="livesValue">3</span></div>
+      </div>
+      <button id="pauseButton">Pausar</button>
+    </div>
+
+    <div class="instructions">
+      <p>Destruye todos los bloques para completar el nivel. ¡No dejes que la bola caiga!</p>
+    </div>
+  </main>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
